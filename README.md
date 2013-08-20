@@ -5,4 +5,4 @@ A gem to facilitate use of the [Pivotal Tracker API v5](https://www.pivotaltrack
 
 The final project created as part of the
 [Building the Toolbelt of a Junior Ruby on Rails Engineer](http://davincicoders.com/building-the-toolbelt-of-a-junior-ruby-on-rails-developer/)
-class I took in the Summer of 2013.
+class taken in the Summer of 2013.
