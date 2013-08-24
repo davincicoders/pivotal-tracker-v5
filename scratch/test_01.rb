@@ -2,7 +2,9 @@
 
 require 'httparty'
 
-TOKEN = '93e1e6aa56d9a1e839a40e0e2021fcef'
+# Add your API token to this constant
+# Do not push to public repo with a value in this
+TOKEN = ENV["PIVOTAL_TOKEN"]
 
 response = HTTParty.get('https://www.pivotaltracker.com/services/v5/me',
                         :headers => {"X-TrackerToken" => TOKEN })
@@ -16,9 +18,3 @@ puts "Name is #{response["name"]}"
 puts "Email is #{response["email"]}"
 puts "API Token is #{response["api_token"]}"
 puts
-
-
-
-
-
-
