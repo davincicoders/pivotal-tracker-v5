@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Pivotal::Tracker::V5::VERSION
   spec.authors       = ["David Bayendor"]
   spec.email         = ["dbayendor@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = ""
+  spec.summary       = ["Ruby wrapper for the Pivotal Tracker v5 API"]
   spec.homepage      = ""
   spec.license       = "MIT"
 
