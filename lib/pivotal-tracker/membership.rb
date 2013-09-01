@@ -23,7 +23,7 @@ require 'httparty'
 
 # class Membership
   # include HTTParty
-  TOKEN = ENV["PIVOTAL_TOKEN"]
+  TOKEN = ENV["PIVOTAL_TOKEN_ID"]
 
   class Membership #<< self
     def all(project_id) #options={})

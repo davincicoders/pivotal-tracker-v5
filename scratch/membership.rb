@@ -8,7 +8,7 @@ require 'httparty'
 
 # /projects/{project_id}/memberships
 
-TOKEN = ENV["PIVOTAL_TOKEN"]
+TOKEN = ENV["PIVOTAL_TOKEN_ID"]
 project_id = 899156     # This may be different in your account
 
 memberships = HTTParty.get("https://www.pivotaltracker.com/services/v5/projects/#{project_id}/memberships",

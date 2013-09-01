@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'pivotal/tracker/v5/version'
+require 'version'
 
 Gem::Specification.new do |spec|
   spec.name          = "pivotal-tracker-v5"
-  spec.version       = Pivotal::Tracker::V5::VERSION
+  spec.version       = PivotalTracker::VERSION
   spec.authors       = ["David Bayendor"]
   spec.email         = ["dbayendor@gmail.com"]
   spec.description   = ""

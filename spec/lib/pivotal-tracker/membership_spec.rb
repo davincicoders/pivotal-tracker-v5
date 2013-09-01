@@ -1,5 +1,5 @@
 require 'spec_helper'
-require './lib/pivotal/membership'
+require './lib/pivotal-tracker/membership'
 
 describe Membership do
   it "is a Membership" do
