@@ -7,6 +7,7 @@ class PivotalTracker::Project
                 :point_scale_is_custom, :profile_content, :public, :start_time,
                 :time_zone, :updated_at, :velocity_averaged_over, :version,
                 :week_start_day
+
   def self.all
     PivotalTracker.get('/projects').parsed_response.map{|project| PivotalTracker::Project.new(project) }
   end
@@ -16,12 +17,14 @@ class PivotalTracker::Project
     if response.code == 200
       parsed_response = response.parsed_response
       PivotalTracker::Project.new(parsed_response)
+    else    # Suggested by JN, CR on 9/1 PR4 - Add PT story?
+      raise PivotalTracker::Error.new("Received #{response.code} while retrieving /projects/#{project_id}")
     end
   end
 
   def initialize(project_attributes)
     project_attributes.each do |attribute, value|
-      self.send(:"#{attribute}=", value)
+      self.send("#{attribute}=".to_sym, value)  # Per JN, C/R on 9/1 PR4
     end
   end
 

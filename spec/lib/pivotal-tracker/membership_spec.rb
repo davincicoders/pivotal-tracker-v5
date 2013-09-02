@@ -8,7 +8,7 @@ describe Membership do
 
   describe ".all" do
     it "should return an array of memberships" do
-      expect(subject.all(899156)).to be_a(Array)
+      expect(subject.all(899156)).to be_an(Array)
     end
   end
 

@@ -8,6 +8,7 @@ describe PivotalTracker::Project do
     set_token
     VCR.insert_cassette 'project', :record => :new_episodes
   end
+
   after do
     VCR.eject_cassette
   end
@@ -22,7 +23,8 @@ describe PivotalTracker::Project do
         expect(project).to be_a(PivotalTracker::Project)
       end
     end
-  end
+  end   # Combine above two tests into 'it "returns an array of all projects"
+        # Suggested by # Per JN, C/R on 9/1 PR4
 
   describe "#find" do
     let(:project) { subject.find(project_id) }

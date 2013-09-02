@@ -15,6 +15,7 @@ end
 
 # VCR Config
 VCR.configure do |c|
+  c.allow_http_connections_when_no_cassette = true
   c.cassette_library_dir = 'spec/fixtures/pivotal_tracker_cassettes'
   c.hook_into :webmock
 

@@ -6,7 +6,7 @@ class PivotalTracker::Story
 
   def initialize(project_attributes)
     project_attributes.each do |attribute, value|
-      self.send(:"#{attribute}=", value)
+      self.send("#{attribute}=".to_sym, value)  # Per JN, C/R on 9/1 PR4
     end
   end
 end
