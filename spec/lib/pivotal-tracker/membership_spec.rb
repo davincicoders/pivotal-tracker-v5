@@ -1,9 +1,8 @@
 require 'spec_helper'
-require './lib/pivotal-tracker/membership'
 
-describe Membership do
+describe PivotalTracker::Membership do
   it "is a Membership" do
-    expect(subject).to be_a(Membership)
+    expect(subject).to be_a(PivotalTracker::Membership)
   end
 
   describe ".all" do
