@@ -1,6 +1,6 @@
 require 'vcr'
 require 'pivotal-tracker'
-TOKEN = ENV["PIVOTAL_TOKEN_ID"]
+TOKEN = ENV["PIVOTAL_TOKEN_ID"]  # here until we a better place for it
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
