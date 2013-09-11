@@ -1,6 +1,8 @@
 require 'vcr'
 require 'pivotal-tracker'
-TOKEN = ENV["PIVOTAL_TOKEN_ID"]
+require 'yaml'
+
+TOKEN = ENV["PIVOTAL_TOKEN_ID"]  # here until we a better place for it
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -45,3 +47,5 @@ end
 def set_token
   PivotalTracker::Client.token = ENV['PIVOTAL_TOKEN_ID']
 end
+
+config = YAML::load_file(File.dirname(__FILE__) + '/config/pivotal_credentials.yml')
