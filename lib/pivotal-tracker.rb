@@ -1,4 +1,4 @@
-# require 'version'
+require 'version'
 require 'httparty'
 
 class PivotalTracker
