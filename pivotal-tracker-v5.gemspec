@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'version'
+# require 'version'
 
 Gem::Specification.new do |spec|
   spec.name          = "pivotal-tracker-v5"
-  spec.version       = PivotalTracker::VERSION
+  spec.version       = "0.0.1"
   spec.authors       = ["David Bayendor"]
   spec.email         = ["dbayendor@gmail.com"]
   spec.description   = "This is a Ruby wrapper for the Pivotal Tracker v5 API. To learn more about the gem, visit ______, to learn more about the API, visit http://www.pivotaltracker/com/URL/TO/V5/API"
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "vcr"
-  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "webmock", "~> 1.11.0"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "guard-rspec"
   spec.add_development_dependency "debugger"
